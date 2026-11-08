@@ -1,62 +1,77 @@
 # GDM Detection Using Random Forest, Aquila Optimizer, and Grey Wolf Optimizer
 
-A Machine Learning project to detect Gestational Diabetes Mellitus (GDM) using Random Forest and compare two metaheuristic optimization algorithms: **Aquila Optimizer (AO)** and **Grey Wolf Optimizer (GWO)** for hyperparameter tuning.
+<p align="center">
+  A Machine Learning project for Gestational Diabetes Mellitus (GDM) detection using Random Forest, Aquila Optimizer (AO), and Grey Wolf Optimizer (GWO).
+</p>
 
-## Project Overview
+<p align="center">
+  <a href="https://huggingface.co/spaces/tanzz15/gdm-ao-gwo-rf">Live Demo</a> •
+  <a href="https://github.com/tanzz15">GitHub Profile</a>
+</p>
 
-Gestational Diabetes Mellitus (GDM) is a type of diabetes that develops during pregnancy. This project explores the application of machine learning to detect potential GDM cases based on demographic and clinical features.
+---
 
-The main objective is to compare the performance of three Random Forest models:
+## About the Project
 
-- **Random Forest Baseline:** Model without hyperparameter optimization.
-- **Random Forest + GWO:** Model optimized using Grey Wolf Optimizer.
-- **Random Forest + AO:** Model optimized using Aquila Optimizer.
+This project focuses on detecting Gestational Diabetes Mellitus (GDM) using Machine Learning techniques. It combines the Random Forest classification algorithm with two metaheuristic optimization algorithms: Aquila Optimizer (AO) and Grey Wolf Optimizer (GWO).
 
-## Dataset
+The project uses a dataset containing **1,372 records** with 29 selected predictor features. An additional feature, Body Mass Index (BMI), is generated through feature engineering, resulting in 30 features for model training.
 
-The dataset consists of **1,372 records** with 29 selected predictor features and a binary target class.
+The main objective is to compare the performance of Random Forest without optimization against Random Forest optimized using AO and GWO.
 
-- **Source:** [Mendeley Data](https://data.mendeley.com/datasets/k5c8rfgsn9/1)
-- **DOI:** [10.17632/k5c8rfgsn9.1](https://doi.org/10.17632/k5c8rfgsn9.1)
-- **Target Classes:** GDM Positive and GDM Negative
-- **Selected Predictors:** 29 features
-- **Final Modeling Features:** 30 features, including BMI
+## Technologies & Tools
 
-### Feature Engineering
+- **Python** – Main programming language.
+- **Pandas** – Data manipulation and preprocessing.
+- **NumPy** – Numerical computation.
+- **Scikit-learn** – Machine Learning model development and evaluation.
+- **Joblib** – Model serialization and loading.
+- **Random Forest** – Classification algorithm.
+- **Aquila Optimizer (AO)** – Hyperparameter optimization.
+- **Grey Wolf Optimizer (GWO)** – Hyperparameter optimization.
+- **MLflow** – Experiment tracking.
+- **Gradio** – Web application development.
+- **Hugging Face Spaces** – Application deployment.
 
-An additional feature, Body Mass Index (BMI), is generated from weight and height.
+## Project Workflow
 
-\[
-BMI = \frac{Weight}{(Height/100)^2}
-\]
+The project follows these main steps:
 
-The resulting dataset contains 30 features for model training.
+1. **Data Collection** – Using the Gestational Diabetes Mellitus dataset.
+2. **Data Preprocessing** – Cleaning and preparing the dataset.
+3. **Feature Selection** – Selecting 29 predictor features.
+4. **Feature Engineering** – Calculating BMI and adding it as an additional feature.
+5. **Data Splitting** – Dividing the dataset into training and testing sets using an 80:20 stratified split.
+6. **Model Development** – Building a Random Forest classification model.
+7. **Hyperparameter Optimization** – Using AO and GWO to search for optimal Random Forest parameters.
+8. **Model Evaluation** – Comparing the three models using classification metrics.
+9. **Deployment** – Integrating the trained models into a web application using Gradio and Hugging Face Spaces.
 
-## Methodology
+## Machine Learning Methods
 
-The project workflow consists of:
+### Random Forest
 
-1. Data preprocessing and cleaning.
-2. Feature selection.
-3. BMI feature engineering.
-4. Stratified train-test split (80:20).
-5. Random Forest model development.
-6. Hyperparameter tuning using AO and GWO.
-7. Model evaluation and comparison.
+Random Forest is an ensemble learning algorithm that combines multiple decision trees to produce classification predictions.
 
-### Optimization Algorithms
+### Aquila Optimizer (AO)
 
-**Grey Wolf Optimizer (GWO)**
+Aquila Optimizer is a nature-inspired metaheuristic algorithm based on the hunting strategies of Aquila eagles. In this project, AO is used to optimize Random Forest hyperparameters.
 
-A metaheuristic optimization algorithm inspired by the social hierarchy and hunting behavior of grey wolves.
+### Grey Wolf Optimizer (GWO)
 
-**Aquila Optimizer (AO)**
+Grey Wolf Optimizer is a nature-inspired optimization algorithm based on the social hierarchy and hunting behavior of grey wolves. In this project, GWO is used to optimize Random Forest hyperparameters.
 
-A metaheuristic optimization algorithm inspired by the hunting strategies of the Aquila eagle.
+## Model Comparison
 
-Both algorithms are used to search for optimal Random Forest hyperparameters.
+This project evaluates three different models:
 
-## Model Evaluation
+| Model | Description |
+|---|---|
+| Random Forest Baseline | Random Forest without optimization |
+| Random Forest + AO | Random Forest optimized using Aquila Optimizer |
+| Random Forest + GWO | Random Forest optimized using Grey Wolf Optimizer |
+
+## Evaluation Metrics
 
 The models are evaluated using the following metrics:
 
@@ -67,77 +82,43 @@ The models are evaluated using the following metrics:
 - AUC-ROC
 - Computation Time
 
-The evaluation compares the baseline Random Forest model with the two optimized models.
+These metrics are used to compare classification performance and computational efficiency across the three models.
 
-## Application Demo
+## Dataset Information
 
-The trained models are integrated into a web application built with **Gradio**.
+- **Dataset:** Gestational Diabetes Mellitus (GDM)
+- **Source:** [Mendeley Data](https://data.mendeley.com/datasets/k5c8rfgsn9/1)
+- **DOI:** [10.17632/k5c8rfgsn9.1](https://doi.org/10.17632/k5c8rfgsn9.1)
+- **Total Records:** 1,372
+- **Selected Predictor Features:** 29
+- **Additional Feature:** BMI
+- **Final Modeling Features:** 30
+- **Target:** GDM Positive / GDM Negative
 
-Users can input demographic and clinical features and compare prediction results from all three models:
+### BMI Calculation
 
-- Random Forest Baseline
-- Random Forest + GWO
-- Random Forest + AO
+BMI is calculated using weight and height:
 
-**Live Demo:** [GDM Detection Web Application](https://huggingface.co/spaces/tanzz15/gdm-ao-gwo-rf)
+\[
+BMI = \frac{Weight}{(Height/100)^2}
+\]
 
-## Repository Structure
+## Live Demo
 
-```text
-├── artifacts/
-├── GDM.ipynb
-├── app.py
-├── requirements.txt
-├── README.md
-└── .gitignore
-```
+Try the deployed GDM detection application:
 
-## Technologies Used
+**https://huggingface.co/spaces/tanzz15/gdm-ao-gwo-rf**
 
-- Python
-- NumPy
-- Pandas
-- Scikit-learn
-- Random Forest
-- Aquila Optimizer
-- Grey Wolf Optimizer
-- Gradio
-- Joblib
+The application provides prediction results from three models: Random Forest Baseline, Random Forest + AO, and Random Forest + GWO.
 
-## How to Run Locally
+## Developer
 
-Clone the repository:
+**GitHub:** [@tanzz15](https://github.com/tanzz15)
 
-```bash
-git clone https://github.com/tanzz15/GDM-Detection-Perbandingan-Aquila-Optimizer-dan-Grey-Wolf-Optimizer-dalam-Tuning-Random-Forest.git
-```
+This project demonstrates experience in data preprocessing, feature engineering, Machine Learning development, metaheuristic optimization, model evaluation, experiment tracking, and application deployment.
 
-Navigate to the project directory:
+---
 
-```bash
-cd GDM-Detection-Perbandingan-Aquila-Optimizer-dan-Grey-Wolf-Optimizer-dalam-Tuning-Random-Forest
-```
-
-Install the required dependencies:
-
-```bash
-pip install -r requirements.txt
-```
-
-Run the application:
-
-```bash
-python app.py
-```
-
-Open the local URL displayed in the terminal.
-
-## Research Objective
-
-This project investigates the effectiveness of Aquila Optimizer and Grey Wolf Optimizer in tuning Random Forest hyperparameters for Gestational Diabetes Mellitus detection.
-
-The comparison aims to identify which optimization algorithm provides better overall model performance.
-
-## Disclaimer
-
-This project is developed for academic and research purposes. The predictions are not intended to replace professional medical diagnosis or clinical judgment.
+<p align="center">
+  Developed as an academic research project.
+</p>
