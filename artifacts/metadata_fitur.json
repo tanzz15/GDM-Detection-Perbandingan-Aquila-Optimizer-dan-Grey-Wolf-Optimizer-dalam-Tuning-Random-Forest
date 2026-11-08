@@ -1,0 +1,338 @@
+{
+  "age": {
+    "label": "age",
+    "pilihan": null
+  },
+  "address": {
+    "label": "address",
+    "pilihan": [
+      {
+        "nilai": 1.0,
+        "label": "urban"
+      },
+      {
+        "nilai": 2.0,
+        "label": "sub-urban"
+      },
+      {
+        "nilai": 3.0,
+        "label": "rural"
+      }
+    ]
+  },
+  "arsenic": {
+    "label": "arsenic",
+    "pilihan": [
+      {
+        "nilai": 1.0,
+        "label": "arsenic prevalent"
+      },
+      {
+        "nilai": 2.0,
+        "label": "np"
+      }
+    ]
+  },
+  "DMf": {
+    "label": "DMf",
+    "pilihan": [
+      {
+        "nilai": 1.0,
+        "label": "y"
+      },
+      {
+        "nilai": 2.0,
+        "label": "n"
+      }
+    ]
+  },
+  "DMm": {
+    "label": "DMm",
+    "pilihan": [
+      {
+        "nilai": 1.0,
+        "label": "y"
+      },
+      {
+        "nilai": 2.0,
+        "label": "n"
+      }
+    ]
+  },
+  "DMp": {
+    "label": "DMp",
+    "pilihan": [
+      {
+        "nilai": 1.0,
+        "label": "y"
+      },
+      {
+        "nilai": 2.0,
+        "label": "n"
+      }
+    ]
+  },
+  "DMsibling": {
+    "label": "DMsibling",
+    "pilihan": [
+      {
+        "nilai": 1.0,
+        "label": "y"
+      },
+      {
+        "nilai": 2.0,
+        "label": "n"
+      }
+    ]
+  },
+  "DMpf": {
+    "label": "DMpf",
+    "pilihan": [
+      {
+        "nilai": 1.0,
+        "label": "y"
+      },
+      {
+        "nilai": 2.0,
+        "label": "n"
+      }
+    ]
+  },
+  "DMmf": {
+    "label": "DMmf",
+    "pilihan": [
+      {
+        "nilai": 1.0,
+        "label": "y"
+      },
+      {
+        "nilai": 2.0,
+        "label": "n"
+      }
+    ]
+  },
+  "obesity": {
+    "label": "obesity",
+    "pilihan": [
+      {
+        "nilai": 1.0,
+        "label": "y"
+      },
+      {
+        "nilai": 2.0,
+        "label": "n"
+      }
+    ]
+  },
+  "pcos": {
+    "label": "pcos",
+    "pilihan": [
+      {
+        "nilai": 1.0,
+        "label": "y"
+      },
+      {
+        "nilai": 2.0,
+        "label": "n"
+      }
+    ]
+  },
+  "abortion": {
+    "label": "abortion",
+    "pilihan": [
+      {
+        "nilai": 1.0,
+        "label": "y"
+      },
+      {
+        "nilai": 2.0,
+        "label": "n"
+      }
+    ]
+  },
+  "iud": {
+    "label": "iud",
+    "pilihan": [
+      {
+        "nilai": 1.0,
+        "label": "y"
+      },
+      {
+        "nilai": 2.0,
+        "label": "n"
+      }
+    ]
+  },
+  "nnd": {
+    "label": "nnd",
+    "pilihan": [
+      {
+        "nilai": 1.0,
+        "label": "y"
+      },
+      {
+        "nilai": 2.0,
+        "label": "n"
+      }
+    ]
+  },
+  "prom": {
+    "label": "prom",
+    "pilihan": [
+      {
+        "nilai": 1.0,
+        "label": "y"
+      },
+      {
+        "nilai": 2.0,
+        "label": "n"
+      }
+    ]
+  },
+  "macrosomia": {
+    "label": "macrosomia",
+    "pilihan": [
+      {
+        "nilai": 1.0,
+        "label": "y"
+      },
+      {
+        "nilai": 2.0,
+        "label": "n"
+      }
+    ]
+  },
+  "baby3.5": {
+    "label": "baby3.5",
+    "pilihan": [
+      {
+        "nilai": 1.0,
+        "label": "y"
+      },
+      {
+        "nilai": 2.0,
+        "label": "n"
+      }
+    ]
+  },
+  "eclampsia": {
+    "label": "eclampsia",
+    "pilihan": [
+      {
+        "nilai": 1.0,
+        "label": "y"
+      },
+      {
+        "nilai": 2.0,
+        "label": "n"
+      }
+    ]
+  },
+  "gdm": {
+    "label": "gdm",
+    "pilihan": [
+      {
+        "nilai": 1.0,
+        "label": "y"
+      },
+      {
+        "nilai": 2.0,
+        "label": "n"
+      }
+    ]
+  },
+  "hypo": {
+    "label": "hypo",
+    "pilihan": [
+      {
+        "nilai": 1.0,
+        "label": "y"
+      },
+      {
+        "nilai": 2.0,
+        "label": "n"
+      }
+    ]
+  },
+  "hyper": {
+    "label": "hyper",
+    "pilihan": [
+      {
+        "nilai": 1.0,
+        "label": "y"
+      },
+      {
+        "nilai": 2.0,
+        "label": "n"
+      }
+    ]
+  },
+  "htn": {
+    "label": "htn",
+    "pilihan": [
+      {
+        "nilai": 1.0,
+        "label": "y"
+      },
+      {
+        "nilai": 2.0,
+        "label": "n"
+      }
+    ]
+  },
+  "polyH": {
+    "label": "polyH",
+    "pilihan": [
+      {
+        "nilai": 1.0,
+        "label": "y"
+      },
+      {
+        "nilai": 2.0,
+        "label": "n"
+      }
+    ]
+  },
+  "primi": {
+    "label": "primi",
+    "pilihan": [
+      {
+        "nilai": 1.0,
+        "label": "y"
+      },
+      {
+        "nilai": 2.0,
+        "label": "m"
+      }
+    ]
+  },
+  "multiP": {
+    "label": "multiP",
+    "pilihan": [
+      {
+        "nilai": 1.0,
+        "label": "y"
+      },
+      {
+        "nilai": 2.0,
+        "label": "n"
+      }
+    ]
+  },
+  "ht": {
+    "label": "ht",
+    "pilihan": null
+  },
+  "wt1": {
+    "label": "wt1",
+    "pilihan": null
+  },
+  "fbs1": {
+    "label": "fbs1",
+    "pilihan": null
+  },
+  "h2.1": {
+    "label": "h2.1",
+    "pilihan": null
+  }
+}

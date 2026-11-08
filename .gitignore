@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Virtual environment
+.venv/
+
+# Dataset
+data/*.sav
+
+# MLflow
+mlflow.db
+mlflow_backup.db
+mlruns/
+mlartifacts/
+
+# Environment variables
+.env
+
+# Jupyter
+.ipynb_checkpoints/
